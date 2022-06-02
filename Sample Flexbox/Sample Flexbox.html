@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Shortcut icon" href="../flexbox logo.png"> <!--FavIcons  -->
+    <title>Flexbox</title>
+    <style>
+        body{
+            padding: 2em;
+        }
+
+        .headerContainer{
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: tomato;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .footerContainer{
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: lightgreen;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .mainContainer{
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+        .mainContentItem{
+            text-align: left;
+            background: deepskyblue;
+        }
+        article{
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+        
+        .sideBarLeftItem{ background: gold; }
+        .sideBarRightItem{background: hotpink;}
+
+
+        .sideBarItem{ flex: 1 0 0; border: 0px solid green;}
+        .mainContentItem{ flex: 3 0px;}
+        .sideBarLeftItem{ order: 1; }
+        .mainContentItem{ order: 2; }
+        .sideBarRightItem{ order: 3; }
+    </style>
+</head>
+<body>
+ <header class="headerContainer">Header - Sample FlexBox Example</header>
+ <div class="mainContainer">
+ <section class="mainContentItem">
+    <article>
+    <h2>First Article </h2>
+    <p>Though video games are increasingly making their way into classrooms, scientists who study them say the data are lacking on whether they can actually improve learning — and most agree that teachers still outperform games in all but a few circumstances.</p>
+</article>
+<article>
+    <h2>Second Article </h2>
+    <p>But there is growing evidence that some types of video games may improve brain performance on a narrow set of tasks. This is potentially good news for students, as well as for the millions of people who love to play, or at least cant seem to stop playing (see infographic).</p>
+</article>
+<article>
+    <h2>Third Article </h2>
+    <p>“There is a lot of evidence that people — and not just young people — spend a lot of time playing games on their screens,” says Richard Mayer, an education psychology researcher at the University of California, Santa Barbara. “If we could turn that into something more productive, that would be a worthwhile thing to do.”</p>
+    <p>In an article in the 2019 Annual Review of Psychology, Mayer set out to evaluate rigorous experiments that tested what people can learn from games. Though he is not entirely convinced of games educational potential, some studies did suggest that games can be effective in teaching a second language, math and science. The hope, he says, is to figure out how to harness any brain-boosting potential for better classroom results.</p>
+</article> </section>
+
+<sidebar class="sideBarItem sideBarLeftItem"><div class="center"><p>Left Side Bar</p></div></sidebar> 
+<sidebar class="sideBarItem sideBarRightItem"><div class="center"><p>Right Side Bar</p></div></sidebar> 
+</div>
+ <footer class="footerContainer">Footer</footer>
+
+</body>
+</html>
